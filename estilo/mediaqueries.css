@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+@font-face{
+    src: url(../fontes/OpenSans-Light.ttf);
+    font-family: OpenSans;
+    font-weight: 300;
+}
+
+@font-face{
+    src: url(../fontes/OpenSans-SemiBold.ttf);
+    font-family: OpenSans;
+    font-weight: bold;
+}
+
+:root{
+    --cor-titulos: #698293;
+    --cor-box-primeira: #698095;
+    --cor-box-segunda: #556877;
+    --cor-bg-instagram: #97a4ae;
+    --cor-bg-facebook: #546875;
+    --cor-bg-endereco: #698091;
+    --cor-bg-rodape: #576877;
+
+    --font1: OpenSans, Arial, Helvetica, sans-serif;
+}
+
+/*--------------------- Media Queries ---------------------------*/
+@media screen and (max-width:768px){
+    .center-flex{
+        justify-content: space-around;
+    }
+
+    /*-------------- header-section-1 ---------------*/ 
+    header #header-section-1 img{
+        transition: .5s;
+
+        position: relative;
+        top: 0;
+    
+        width: 70%;
+        max-width: 220px;
+    }
+    /*------------------- alterar ------------------------*/
+    header #header-section-1 ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+    
+        position: absolute;
+        top: -15px;
+        right: 25%;
+    
+        width: 50%;
+        max-width: 100px;
+
+        opacity: 0;
+    }
+    
+    header #header-section-1 ul li a{
+        border-top: 1px solid beige;
+        border-bottom: 1px solid beige;
+        border-collapse: collapse;
+    }
+    /*------------------- alterar ------------------------*/
+    header #header-section-1 .material-icons{
+        display: block;
+
+        color: #65bac5;
+        font-size: 2.5em;
+
+        cursor: pointer;
+
+        transition: .5s;
+    }
+
+    header #header-section-1 .material-icons:hover{
+        color: #95d5de;
+    }
+
+    header #header-section-1 .material-icons:hover + ul{
+        opacity: 1;
+    }
+
+    /*-------------- header-section-2 ---------------*/     
+    header #header-section-2 div.imagem-1{
+        width: 28%;
+        padding-top: 28%;
+    }
+
+    header #header-section-2 div.imagem-none{
+        display: none;
+    }
+
+    /*-------------- header-section-3 ---------------*/ 
+    header #header-section-3{
+        flex-direction: column;
+    }
+    
+    header #header-section-3 > div{
+        width: 90%;
+        max-width: 350px;
+
+        height: auto;
+    }
+    
+    header #header-section-3 > div.box-segunda{
+        max-width: 300px;
+
+        padding: 40px 15px;
+    
+        background-color: var(--cor-box-segunda);
+
+        order: 2;
+
+        height: auto;
+    }
+    
+    header #header-section-3 > div.box-primeira{ 
+        padding: 40px 15px;
+    
+        background-color: var(--cor-box-primeira);
+
+        order: 1;
+
+        height: auto;
+    }
+
+    /*------------------ main-quemsou -------------------------*/
+    main #quemsou-box-1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main #quemsou-box-1-image{
+        text-align: center;
+
+        width: 95%;
+
+        padding: 0;
+    }
+
+    main #quemsou-box-1-image img{
+        width: 95%;
+        max-width: 400px;
+    }
+
+    main #quemsou-box-1-texto{
+        width: 95%;
+        max-width: 400px;
+
+        padding: 60px 10px;
+    }
+
+    main #quemsou-box-2{
+        width: 100%;
+
+        margin-top: 80px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 40px;
+    }
+
+    main #quemsou-box-2 > div{
+        width: 90%;
+        max-width: 500px;
+        height: 250px;
+    }
+
+    main #quemsou-box-2 > div > iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*------------------ main-tratamentos -------------------------*/
+    main #tratamentos-box-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 25px;
+    }
+
+    main #tratamentos-box-1 > div{
+        width: 45%;
+
+        text-align: left;
+    } 
+ 
+}

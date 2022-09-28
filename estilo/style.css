@@ -1,0 +1,532 @@
+@charset "UTF-8";
+
+@font-face{
+    src: url(../fontes/OpenSans-Light.ttf);
+    font-family: OpenSans;
+    font-weight: 300;
+}
+
+@font-face{
+    src: url(../fontes/OpenSans-SemiBold.ttf);
+    font-family: OpenSans;
+    font-weight: bold;
+}
+
+:root{
+    --cor-titulos: #698293;
+    --cor-box-primeira: #698095;
+    --cor-box-segunda: #556877;
+    --cor-bg-instagram: #97a4ae;
+    --cor-bg-facebook: #546875;
+    --cor-bg-endereco: #698091;
+    --cor-bg-rodape: #576877;
+
+    --font1: OpenSans, Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+html, body{
+    height: 100%;
+}
+
+.center-1{
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+.center-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.image-animation{
+    background-image: url(../imagens/dentista.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-animation:hover{
+    animation-name: animation1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}   
+
+@keyframes animation1{
+    100%{
+        transform: scale(1.2, 1.2);
+    }
+}
+
+/*-------------- header ---------------*/
+
+header{
+    padding: 20px;
+
+    position: relative;
+}
+
+header #header-section-1{
+    height: 80px;
+}
+
+header #header-section-1 img{
+    position: relative;
+    top: 20px;
+
+    width: 90%;
+    max-width: 220px;
+
+    transition: .5s;
+}
+
+header #header-section-1 ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    top: 20px;
+
+    width: 60%;
+    max-width: 600px;
+
+    list-style-type: none;
+}
+
+header #header-section-1 ul li a{
+    text-decoration: none;
+    color: var(--cor-titulos);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+header #header-section-1 ul li a:hover{
+    color: #97a4ae;
+}
+
+header #header-section-1 .material-icons{
+    display: none;
+
+    transition: .5s;
+}
+
+header #header-section-2{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    overflow: hidden;
+}
+
+header #header-section-2 div.imagem-1{
+    width: 15%;
+    padding-top: 15%;
+
+    background-color: beige;
+}
+
+header #header-section-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    position: relative;
+
+  
+}
+
+header #header-section-3 > div{
+    width: 33.33%;
+    max-width: 250px;
+
+    text-align: center;
+
+    position: relative;
+    top: -50px;
+}
+
+header #header-section-3 > div.box-segunda{
+    height: 180px;
+
+    padding: 15px;
+
+    background-color: var(--cor-box-segunda);
+}
+
+header #header-section-3 > div.box-primeira{
+    height: 215px;
+
+    padding: 35px 15px 15px 15px;
+
+    background-color: var(--cor-box-primeira);
+}
+
+header #header-section-3 > div > h2{
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: white;
+}
+
+header #header-section-3 > div > p{
+    font-size: 0.8em;
+    color: white;
+
+    margin: 8px 0 8px 0;
+}
+
+/*------------------ main-quemsou -------------------------*/
+main #quemsou{
+    width: 100%;
+
+    margin-bottom: 100px;
+}
+
+main #quemsou-box-1{
+    display: flex;
+    flex-direction: row;
+
+}
+
+main #quemsou-box-1-image{
+    width: 40%;
+
+    padding: 0;
+}
+
+main #quemsou-box-1-image img{
+    width: 100%;
+
+    padding-left: 2%;
+}
+
+main #quemsou-box-1-texto{
+    width: 60%;
+
+    padding: 60px;
+}
+
+main #quemsou-box-1-texto p{
+    margin-top: 15px;
+
+    font-size: 0.9em;
+}
+
+main #quemsou-box-2{
+    width: 100%;
+
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main #quemsou-box-2 > div{
+    width: 30%;
+}
+
+main #quemsou-box-2 > div > iframe{
+    width: 100%;
+
+    border-radius: 2px;
+}
+
+/*------------------ main-tratamentos -------------------------*/
+main #tratamentos{
+    padding: 80px 0px;
+
+    width: 95%;
+
+    text-align: center;
+}
+
+main #tratamentos h2{
+    margin-bottom: 80px;
+
+    font-size: 1.2em;
+}
+
+main #tratamentos-box-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+main #tratamentos-box-1 p{
+    font-size: 0.8em;
+
+    margin-top: 10px;
+}
+
+main #tratamentos-box-1 h3{
+    font-size: 1.2em;
+}
+
+main #tratamentos-box-1 > div{
+    width: 30%;
+
+    text-align: left;
+}
+
+/*------------------ main-depoimentos -------------------------*/
+main #depoimentos{
+    padding: 80px 0;
+
+    width: 95%;
+
+    text-align: center;
+}
+
+main #depoimentos h2{
+    font-size: 1.2em;
+
+    margin-bottom: 80px;
+}
+
+main #depoimentos div{
+    width: 95%;
+    max-width: 500px;
+
+    margin: 0 auto;
+}
+
+main #depoimentos div p{
+    font-size: 0.9em;
+
+    margin: 20px 0;
+
+    position: relative;
+}
+
+main #depoimentos img{
+    display: inline-block;
+
+    margin-right: 25px;
+
+    transform: translateY(40%);
+}
+
+main #depoimentos > div > span{
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: gray;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+main #depoimentos > div > span:hover{
+    background-color: rgb(150, 150, 150);
+}
+
+/*------------------ main-contato -------------------------*/
+main #contato{
+    width: 100%;
+
+    overflow: hidden;
+}
+
+main #instagram{
+    background-color: var(--cor-bg-instagram);
+
+    padding: 35px 0;
+
+    text-align: center;
+}
+
+main #instagram p{
+    margin: 10px 0;
+
+    color: white;
+    font-size: 0.9em;
+}
+
+main #instagram a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+}
+
+main #fotos{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main #fotos div{
+    width: 11%;
+    padding-top: 11%;
+
+    background-color: beige;
+}
+
+main #facebook{
+    background-color: var(--cor-bg-facebook);
+
+    padding: 35px 0;
+
+    text-align: center;
+}
+
+main #facebook p{
+    margin: 10px 0;
+
+    color: white;
+    font-size: 0.9em;
+}
+
+main #facebook a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+}
+
+main #contato-form{
+    background-color: whitesmoke;
+
+    padding-bottom: 100px;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+main #contato-form h2{
+    font-size: 1.2em;
+
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+
+main #contato-form form{
+    width: 95%;
+    max-width: 450px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+main #contato-form form > div > input{
+    width: 100%;
+}
+
+main #contato-form form > div > div{
+    width: 49%;
+}
+
+main #contato-form form > div > div:nth-of-type(1){
+    float: left;
+}
+
+main #contato-form form > div > div:nth-of-type(2){
+    float: right;
+}
+
+main #contato-form form > div > div > input{
+    width: 100%;
+}
+
+main #contato-form form div textarea{
+    width: 100%;
+    height: 125px;
+
+    resize: none;
+}
+
+main #contato-form form input,
+main #contato-form form textarea{
+    border: 1px solid var(--cor-bg-facebook);
+    
+    padding: 10px;
+
+    margin: 10px 0;
+}
+
+main #contato-form form > input[type="submit"]{
+    padding: 5px 30px;
+    margin: 25px auto;
+
+    display: block;
+
+    width: max-content;
+
+    background-color: var(--cor-bg-facebook);
+
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+main #contato-form form > input[type="submit"]:hover{
+    background-color: var(--cor-bg-endereco);
+}
+
+main #info{
+    padding: 60px 0;
+
+    background-color: var(--cor-bg-endereco);
+}
+
+main #info > div > div{
+    padding: 0 10px;
+
+    width: 30%;
+}
+
+main #info h3{
+    color: white;
+    font-size: 1em;
+}
+
+main #info p{
+    color: white;
+    font-size: 0.8em;
+
+    margin-top: 10px;
+}
+
+/*-------------------- footer ----------------------*/
+footer{
+    background-color: var(--cor-bg-rodape);
+
+    padding: 30px 0;
+}
+
+footer p{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
